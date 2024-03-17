@@ -13,6 +13,7 @@ docker network create elastic
 docker run -id --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "xpack.security.enabled=false" -e "xpack.security.http.ssl.enabled=false" -t docker.elastic.co/elasticsearch/elasticsearch:8.8.2
 ```
 
+
 ### 第2步：Kibana docker部署
 **注意：Kibana版本与ES保持一致**
 ```shell
